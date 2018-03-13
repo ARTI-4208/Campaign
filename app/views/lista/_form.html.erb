@@ -1,0 +1,22 @@
+<%= form_with(model: listum, local: true) do |form| %>
+  <% if listum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(listum.errors.count, "error") %> prohibited this listum from being saved:</h2>
+
+      <ul>
+      <% listum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_area :nombre, id: :listum_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

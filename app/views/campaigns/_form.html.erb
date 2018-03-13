@@ -1,0 +1,47 @@
+<%= form_with(model: campaign, local: true) do |form| %>
+  <% if campaign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
+
+      <ul>
+      <% campaign.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_area :nombre, id: :campaign_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_inicio %>
+    <%= form.date_select :fecha_inicio, id: :campaign_fecha_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_fin %>
+    <%= form.date_select :fecha_fin, id: :campaign_fecha_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :segmento_cliente %>
+    <%= form.text_area :segmento_cliente, id: :campaign_segmento_cliente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lista_distribucion_clientes %>
+    <%= form.number_field :lista_distribucion_clientes, id: :campaign_lista_distribucion_clientes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lista_productos %>
+    <%= form.number_field :lista_productos, id: :campaign_lista_productos %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

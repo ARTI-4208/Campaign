@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Campaigns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th>Segmento cliente</th>
+      <th>Lista distribucion clientes</th>
+      <th>Lista productos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @campaigns.each do |campaign| %>
+      <tr>
+        <td><%= campaign.nombre %></td>
+        <td><%= campaign.fecha_inicio %></td>
+        <td><%= campaign.fecha_fin %></td>
+        <td><%= campaign.segmento_cliente %></td>
+        <td><%= campaign.lista_distribucion_clientes %></td>
+        <td><%= campaign.lista_productos %></td>
+        <td><%= link_to 'Show', campaign %></td>
+        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
+        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Campaign', new_campaign_path %>
