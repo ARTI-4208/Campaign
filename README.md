@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: ruby 2.4.2p198
 
-Things you may want to cover:
+* Rails version: Rails 5.1.5
 
-* Ruby version
+* Posgres version: psql (PostgreSQL) 9.5.5
 
-* System dependencies
+* Database creation: Situado en la carpeta del proyecto, por línea de comandos Ejecutar el comando rake db:migrate
 
-* Configuration
+* How to inicialize the app: Situado en la carpeta del proyecto, por línea de comandos Ejecutar el comando bundle install
 
-* Database creation
+* How to run the app: Situado en la carpeta del proyecto, por línea de comandos Ejecutar el comando rails server
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
